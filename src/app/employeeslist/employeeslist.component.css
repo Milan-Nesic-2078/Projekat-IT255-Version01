@@ -1,0 +1,35 @@
+.table-striped{
+
+    background-color: bisque;
+
+    width: 1577px;
+
+    margin-left: 10%;
+
+    margin-top: 3%;
+
+
+}
+
+.form-control{
+
+    margin-left: 10%;
+    
+    margin-top: 3%;
+
+    border-radius: 17px;
+
+    border: none;
+
+    width: 257px;
+
+    
+
+}
+
+
+.pointer :hover{
+
+    cursor: pointer;
+
+}

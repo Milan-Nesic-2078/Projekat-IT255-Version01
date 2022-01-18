@@ -1,0 +1,15 @@
+.position{
+
+    padding-left: 17px;
+
+    color: white;
+
+    background-image: url("/assets/logWallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    box-shadow: 31px 19px 19px rgb(97, 88, 88);
+
+}
+

@@ -1,0 +1,27 @@
+
+<div class="form-group">
+
+<input type="text" class="form-control" placeholder="Search By Name" [(ngModel)]="searchStr"/>
+
+</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col" sortable="name">Picture:</th>
+      <th scope="col" sortable="name">Name:</th>
+      <th scope="col" sortable="area">LastName:</th>
+      <th scope="col" sortable="population">Position:</th>
+      <th scope="col" sortable="population">Date:</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="pointer"  *ngFor="let employee of emplArr | employeeFilter:searchStr" (click)="emplInfo(employee.empId)">
+      <td ><img [src]=images width="47px"></td>
+      <td>{{employee.emplName}}</td>
+      <td>{{employee.emplLastaName}}</td>
+      <td>{{employee.emplPosition}}</td>
+      <td>{{employee.day}} / {{employee.month}} / {{employee.year}}<button type="submit" class="btn btn-danger float-right" (click)="onclick(employee)">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>

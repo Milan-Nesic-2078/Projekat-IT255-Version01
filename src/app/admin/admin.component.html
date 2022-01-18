@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <h3>Create Admin:</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="addAdmin(uName, pAss)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">UsernameS:</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="user" placeholder="Username"
+        #uName>
+      <span style="background-color: rgb(185, 74, 102);" *ngIf="user && user.invalid"> Obavezno polje! </span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password:</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pass"
+        placeholder="Password" #pAss>
+      <span style="background-color: rgb(185, 74, 102);" *ngIf="pass && pass.invalid"> Obavezno polje! </span>
+    </div>
+    <div class="form-check">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+
+  </form>
+
+</div>

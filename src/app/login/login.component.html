@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <h1>Login:</h1>
+  <hr>
+
+  <form class="position">
+    <div class="row col-md-4">
+      <label for="exampleInputEmail1">Username:</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" #usrName>
+    </div>
+    <div class="row col-md-4">
+      <label for="exampleInputPassword1">Password:</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" #passW>
+    </div>
+    <div class="row col-md-4">
+      <button type="submit" class="btn btn-primary" (click)="chekAdmin(usrName, passW, 'adminpanel')">Login</button>
+    </div>
+  </form>
+</div>

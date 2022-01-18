@@ -1,0 +1,58 @@
+<div class="navbar navbar-expand-lg">
+
+    <a href="#" class="navbar-brand" >Status: <a *ngIf = "usrnStr" style="color: green">{{usrnStr}} is active</a></a>
+    
+    <div class="collapse navbar-collapse">
+    
+    <ul class="navbar-nav navbar ml-auto">
+
+        <li class="nav-item">
+
+            <img [src]=imgs1 width="37px"/>
+
+
+           </li>
+
+            <li class="nav-item">
+
+                <a routerLink="/employees" class="nav-link" class="nav-link">Add employess</a>
+
+
+            </li>
+
+            <li class="nav-item">
+
+                <img [src]=imgs2 width="37px"/>
+    
+    
+            </li>
+            
+
+            <li class="nav-item">
+
+                <a routerLink="/employeeslist" class="nav-link">List employess</a>
+
+
+            </li>
+
+            <li class="nav-item">
+
+                <img [src]=imgs3 width="37px"/>
+    
+    
+            </li>
+
+
+            <li class="nav-item">
+
+                <button type="button" (click) = "logOut()" class="btn btn-link">Logout</button>
+
+
+            </li>
+
+    </ul>
+    
+    </div>
+    
+</div>
+

@@ -1,0 +1,42 @@
+<h4>Forma za dodavanje zaposlenih: </h4>
+
+<ol class="lis">
+
+    <li>Ime zaposlenog: </li>
+
+    <input type="text" class="form-control" id="inputform" aria-describedby="emailHelp" #name>
+
+    <li>Prezime zaposlenog: </li>
+
+    <input type="text" class="form-control" id="inputform" aria-describedby="emailHelp" #lastN>
+
+    <li>Pozicija zaposlenog: </li>
+
+    <select class="form-control" #position>
+        <option>Select-position</option>
+        <option>Front-end developrt</option>
+        <option>Back-end developer</option>
+        <option>System-administration</option>
+        <option>IT-Management system</option>
+
+
+      </select>
+
+    <li>Datum zasnivanja radnog odnosa: </li>
+
+    <ngb-datepicker class="dtpic" input type="text" ngbDatepicker [(ngModel)]="date"></ngb-datepicker>
+
+    <p><button type="submit" class="btn btn-primary" (click)="addEmployess(name, lastN, position)">Add employee</button></p>
+    
+</ol>
+
+
+
+
+
+
+
+
+
+
+
