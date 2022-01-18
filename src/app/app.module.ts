@@ -2,6 +2,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router'; 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgRedux, NgReduxModule } from 'ng2-redux';
+import { ApState, INISTATE, rootReducer } from './store';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -43,6 +45,7 @@ import { EmployeesService } from './employees.service';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    NgReduxModule,
     
     RouterModule.forRoot([
        
@@ -60,4 +63,12 @@ import { EmployeesService } from './employees.service';
   providers: [AdminsService, AdminUsernameService, EmployeeService, EmployeesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(_ngredux: NgRedux<ApState>) {
+
+   _ngredux.configureStore(rootReducer, INISTATE);
+
+  }
+
+}

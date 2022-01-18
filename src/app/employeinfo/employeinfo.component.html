@@ -1,25 +1,18 @@
 <div class="row align-items-center  my-row">
 
-    <div class="col-md-2 my-col">
+  <div class="col-md-2 my-col">
 
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-              The current link item
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-            <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
-          </div>
+    <button (click)="addValue()">Unesi iznos isplate</button>
+    <button (click)="printDocument()">Stampaj izvestaj</button>
 
-    </div>
+  </div>
 
-    <div class="col-md-10 my-col">
+  <div class="col-md-10 my-col">
 
-       <p>Ime: {{employe.emplName}}</p>
-       <p>Prezime: {{employe.emplLastaName}}</p>
+    <p> <span> Ime: {{employe.emplName}}, </span> Uplaceni iznos: {{iznos | async }}</p>
+    <p> <span> Prezime: {{employe.emplLastaName}},</span> datum isplate: {{(datum | async | date: 'MMM d, y, h:mm:ss
+      a')}} </p>
 
-    </div>
+  </div>
 
 </div>
-
